@@ -6,7 +6,7 @@
     <title>GameSpark</title>
 </head>
 <body>
-    <?php require __DIR__ . '/../header.php'; ?>
+    
     <form action="../../app/Http/Controllers/meldingenController.php" method="post">
     <input type="hidden" name="action" value="create">
     <div class="form-group">
@@ -18,7 +18,8 @@
     <div class="form-group">
        <label for="platform">Platform</label>
          <select id="platform" name="platform" required>
-              <option value="pc">PC</option>
+             <option value=""----></option>
+             <option value="pc">PC</option>
              <option value="playstation">Playstation</option>
              <option value="nintendo">Nintendo</option>
              <option value="xbox">Xbox</option>
@@ -29,7 +30,8 @@
     <div class="form-group">
        <label for="genre">Genre</label>
          <select id="genre" name="genre" required>
-              <option value="actie">Actie</option>
+             <option value=""----></option>
+             <option value="actie">Actie</option>
              <option value="avontuur">Avontuur</option>
              <option value="puzzel">Puzzel</option>
              <option value="rpg">RPG</option>
@@ -51,7 +53,8 @@
     <div class="form-group">
        <label for="status">Status</label>
          <select id="status" name="status" required>
-              <option value="in_bezit">In bezit</option>
+             <option value=""----></option>
+             <option value="in_bezit">In bezit</option>
              <option value="uitgespeeld">Uitgespeeld</option>
              <option value="speelt_nu">Speelt nu</option>
              <option value="wishlist">Wishlist</option>
@@ -63,11 +66,11 @@
        <label for="beoordeling">Beoordeling</label>
          <select id="beoordeling" name="beoordeling" required>
              <option value=""----></option>
-             <option value="1">1</option>
-             <option value="2">2</option>
-             <option value="3">3</option>
-             <option value="4">4</option>
-             <option value="5">5</option>
+             <option value="1">&#9734;</option>
+             <option value="2">&#9734;&#9734;</option>
+             <option value="3">&#9734;&#9734;&#9734;</option>
+             <option value="4">&#9734;&#9734;&#9734;&#9734;</option>
+             <option value="5">&#9734;&#9734;&#9734;&#9734;&#9734;</option>
          </select>
      </div>    
    
