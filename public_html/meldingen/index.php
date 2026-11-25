@@ -1,7 +1,10 @@
+<?php
 $bericht = 'Game toegevoegd aan bibliotheek' ; \
 
 header('Location: ../../public_html/meldingen/index.php?bericht=' . $bericht);
 exit;
+
+?>
 
 <?php
 
@@ -13,7 +16,7 @@ if (isset($_GET['bericht'])) {
 
 <?php
 
-require_once '../../app/conn.php';
+<?php require_once '../../app/conn.php'; ?>
 
 $query = 'SELECT * FROM meldingen ORDER BY gemeld_op DESC';
 $statement = $conn->prepare($query);
@@ -45,6 +48,7 @@ $meldingen = $statement->fetchAll();
          <td><?= htmlspecialchars($melding['datum_van_toevoeging'], ENT_QUOTES, 'UTF-8') ?></td>
          <td><a href="edit.php?id=<?= $melding['id'] ?>">Aanpassen</a></td>
       </tr>
+      
   <?php endforeach; ?>
   </tbody>
 </table>

@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <form action="../../app/Http/Controllers/gameController.php" method="post">
+    <form action="../../app/Http/Controllers/meldingenController.php" method="post">
     <input type="hidden" name="action" value="create">
     <div class="form-group">
         <label for="naam">Naam</label>
@@ -18,7 +18,7 @@
     <div class="form-group">
        <label for="platform">Platform</label>
          <select id="platform" name="platform" required>
-             <option value=""----></option>
+             <option value=""></option>
              <option value="pc">PC</option>
              <option value="playstation">Playstation</option>
              <option value="nintendo">Nintendo</option>
@@ -30,7 +30,7 @@
     <div class="form-group">
        <label for="genre">Genre</label>
          <select id="genre" name="genre" required>
-             <option value=""----></option>
+             <option value=""></option>
              <option value="actie">Actie</option>
              <option value="avontuur">Avontuur</option>
              <option value="puzzel">Puzzel</option>
@@ -53,7 +53,7 @@
     <div class="form-group">
        <label for="status">Status</label>
          <select id="status" name="status" required>
-             <option value=""----></option>
+             <option value=""></option>
              <option value="in_bezit">In bezit</option>
              <option value="uitgespeeld">Uitgespeeld</option>
              <option value="speelt_nu">Speelt nu</option>
@@ -65,7 +65,7 @@
     <div class="form-group">
        <label for="beoordeling">Beoordeling</label>
          <select id="beoordeling" name="beoordeling" required>
-             <option value=""----></option>
+             <option value=""></option>
              <option value="1">&#9734;</option>
              <option value="2">&#9734;&#9734;</option>
              <option value="3">&#9734;&#9734;&#9734;</option>

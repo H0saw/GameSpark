@@ -1,6 +1,6 @@
 <?php
 
 $dbhost = 'localhost';
-$dbname = 'game data';
-$dbuser = 'gamer';
+$dbname = 'gamespark';
+$dbuser = 'root';
 $dbpass = '';

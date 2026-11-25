@@ -7,7 +7,7 @@ if (!$id) {
 
 require_once __DIR__ . '/../../app/conn.php';
 
-$query = 'SELECT * FROM meldingen WHERE id = :id';
+$query = 'SELECT * FROM `game data` WHERE id = :id';
 $statement = $conn->prepare($query);
 $statement->execute([':id' => $id]);
 
@@ -15,7 +15,7 @@ $melding = $statement->fetch();
 
 if (!$melding) {
     http_response_code(404);
-    exit('Melding mislukt');
+    exit('Game niet opgeslagen');
 }
 
 ?>
@@ -31,7 +31,7 @@ if (!$melding) {
    <?php require __DIR__ . '/../header.php'; ?>
 
 <h1>Aanpassen</h1>
-<form action="../../app/Http/Controllers/gameController.php" method="post">
+<form action="../../app/Http/Controllers/meldingenController.php" method="post">
     <input type="hidden" name="action" value="update">
     <input type="hidden" name="id" value="">
     <input type="hidden" name="id" value="<?= $id ?>">
@@ -44,33 +44,112 @@ if (!$melding) {
     </div>
     
     <div class="form-group">
-       <label>Platform</label>
-         <p><?= htmlspecialchars($melding['platform'], ENT_QUOTES, 'UTF-8') ?></p>
+       <label for="platform">Platform</label>
+            <select id="platform" name="platform" required>
+                <?php
+                if ($melding['platform']) {
+                    ?>
+                        <option value="<?php echo $melding['platform']; ?>" selected><?php echo ucfirst($melding['platform']); ?></option>
+                    <?php
+                } else {
+                    ?>
+                    <option value="" >-- Selecteer een platform --</option>
+                    <?php
+                }
+                ?>
+             
+             
+             <!-- De label is alleen wat op de formulier voorschijnt, wat tussen haakjes staat is wat wordt voorgegeven in de database, typ het dus ook met een hoofdletter -->
+             <option value=""></option>
+             <option value="PC">PC</option>
+             <option value="Playstation">Playstation</option>
+             <option value="Nintendo">Nintendo</option>
+             <option value="Xbox">Xbox</option>
+         </select>
     </div>
+    
     
     
     <div class="form-group">
-       <label>Genre</label>
-         <p><?= htmlspecialchars($melding['genre'], ENT_QUOTES, 'UTF-8') ?></p>
-    </div>
+       <label for="genre">Genre</label>
+            <select id="genre" name="genre" required>
+                <?php
+                if ($melding['genre']) {
+                    ?>
+                        <option value="<?php echo $melding['genre']; ?>" selected><?php echo ucfirst($melding['genre']); ?></option>
+                    <?php
+                } else {
+                    ?>
+                    <option value="" >-- Selecteer een genre --</option>
+                    <?php
+                }
+                ?>
+             <option value=""></option>
+             <option value="Actie">Actie</option>
+             <option value="Avontuur">Avontuur</option>
+             <option value="Puzzel">Puzzel</option>
+             <option value="RPG">RPG</option>
+             <option value="First-person shooter">First-person shooter</option>
+             <option value="Third-person shooter">Third-person shooter</option>
+             <option value="Vechten">Vechten</option>
+             <option value="Indie">Indie</option>
+             <option value="Horror">Horror</option>
+             <option value="Survival">Survival</option>
+         </select>
+ </div>
 
   <div class="form-group">
-        <label>Release date</label>
-        <p><?= htmlspecialchars($melding['release_date'], ENT_QUOTES, 'UTF-8') ?></p>
+        <label for="release_date">Release date</label>
+        <?= htmlspecialchars($melding['release_date'], ENT_QUOTES, 'UTF-8') ?>
   </div>
  
 
     <div class="form-group">
-       <label>Status</label>
-         <p><?= htmlspecialchars($melding['status'], ENT_QUOTES, 'UTF-8') ?></p>
-    </div>
+       <label for="platform">Status</label>
+            <select id="status" name="status" required>
+                <?php
+                if ($melding['status']) {
+                    ?>
+                        <option value="<?php echo $melding['status']; ?>" selected><?php echo ucfirst($melding['status']); ?></option>
+                    <?php
+                } else {
+                    ?>
+                    <option value="" >-- Selecteer de huidige status --</option>
+                    <?php
+                }
+                ?>
+            <option value=""></option>
+             <option value="In bezit">In bezit</option>
+             <option value="Uitgespeeld">Uitgespeeld</option>
+             <option value="Speelt nu">Speelt nu</option>
+             <option value="Wishlist">Wishlist</option>
+         </select>
+     </div>
            
 
     <div class="form-group">
-       <label>Beoordeling</label>
-         <p><?= htmlspecialchars($melding['beoordeling'], ENT_QUOTES, 'UTF-8') ?></p>
-     </div>    
+       <label for="platform">Beoordeling</label>
+            <select id="beoordeling" name="beoordeling" required>
+                <?php
+                if ($melding['beoordeling']) {
+                    ?>
+                        <option value="<?php echo $melding['beoordeling']; ?>" selected><?php echo ucfirst($melding['beoordeling']); ?></option>
+                    <?php
+                } else {
+                    ?>
+                    <option value="" >-- Geef je spel een aantal sterren --</option>
+                    <?php
+                }
+                ?>
+          <option value=""></option>
+             <option value="1">&#9734;</option>
+             <option value="2">&#9734;&#9734;</option>
+             <option value="3">&#9734;&#9734;&#9734;</option>
+             <option value="4">&#9734;&#9734;&#9734;&#9734;</option>
+             <option value="5">&#9734;&#9734;&#9734;&#9734;&#9734;</option>
+         </select>  
+ </div>    
    
-     <div class="melding"><button type="submit">Change game</button>
+     <div class="melding"><button type="submit"></button>
 </body>
 </html>
