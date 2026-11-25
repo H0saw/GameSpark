@@ -54,3 +54,9 @@ $meldingen = $statement->fetchAll();
 <?php else: ?>
   <!-- tabel -->
 <?php endif; ?>
+
+<?php if (($_GET['msg'] ?? '') === 'opgeslagen'): ?>
+  <p style="padding: .75rem; background: rgb(81, 96, 96); color: rgb(100, 83, 94);">Opgeslagen.</p>
+<?php elseif (($_GET['msg'] ?? '') === 'aangepast'): ?>
+  <p style="padding: .75rem; background: rgb(87, 96, 96);; color: rgb(100, 83, 94);;">Aangepast.</p>
+<?php endif; ?>

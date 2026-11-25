@@ -46,7 +46,7 @@
 
   <div class="form-group">
         <label for="release_date">Release date</label>
-        <input type="release_date" id="release_date" name="release_date" required>
+        <input type="date" id="release_date" name="release_date" required>
   </div>
  
 
