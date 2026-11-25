@@ -7,7 +7,7 @@
 </head>
 <body>
     
-    <form action="../../app/Http/Controllers/meldingenController.php" method="post">
+    <form action="../../app/Http/Controllers/gameController.php" method="post">
     <input type="hidden" name="action" value="create">
     <div class="form-group">
         <label for="naam">Naam</label>
