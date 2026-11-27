@@ -9,13 +9,13 @@
       echo ' Release date: ' . htmlspecialchars($release_date) ;
       
       
-     $toegestanePlatforms = ['PC', 'playstation', 'nintendo', 'Xbox'];
+     $toegestanePlatforms = ['pc', 'playstation', 'nintendo', 'xbox'];
      $platform = $_POST['platform'] ?? ' ' ;  
      
-     $toegestaneGenres = ['Actie', 'Avontuur', 'Puzzel','RPG', 'First Person Shooter', 'third person shooter', 'vechten', 'indie', 'horror', 'survival'];
+     $toegestaneGenres = ['actie', 'avontuur', 'puzzel','rpg', 'first-person shooter', 'third-person shooter', 'vechten', 'indie', 'sport', 'horror', 'survival'];
      $genre = $_POST['genre'] ?? ' ' ;
 
-     $toegestaneStatus = ['In bezit', 'Uitgespeeld', 'Speelt nu','Wishlist',];
+     $toegestaneStatus = ['in_bezit', 'uitgespeeld', 'speelt_nu','wishlist',];
      $status = $_POST['status'] ?? ' ' ;
 
      $toegestaneBeoordelingen = ['1', '2', '3','4', '5'];

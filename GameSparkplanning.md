@@ -9,15 +9,12 @@ Vragen:
 
 
 
-Week 1:
+Week 2 en 3:
 
--Basisskelet maken 
-
--Fundamenten (???)
-
--Master/detail en UPDATE
-
--Interview (die van de gedragsindicatoren?)
+-Header en footer
+-PHP functies af (waarbij alle fouten verbeteren)
+-CSS styling
+-Updates werken maar komen als aparte kolommen
 
 
 

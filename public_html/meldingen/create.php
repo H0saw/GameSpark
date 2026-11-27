@@ -35,10 +35,11 @@
              <option value="avontuur">Avontuur</option>
              <option value="puzzel">Puzzel</option>
              <option value="rpg">RPG</option>
-             <option value="first_person_shooter">First-person shooter</option>
-             <option value="third_person_shooter">Third-person shooter</option>
+             <option value="first-person shooter">First-person shooter</option>
+             <option value="third-person shooter">Third-person shooter</option>
              <option value="vechten">Vechten</option>
              <option value="indie">Indie</option>
+             <option value="sport">Sport</option>
              <option value="horror">Horror</option>
              <option value="survival">Survival</option>
          </select>

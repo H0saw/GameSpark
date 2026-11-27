@@ -5,6 +5,7 @@ if (!$id) {
     exit('Ongeldig id.');
 }
 
+
 require_once __DIR__ . '/../../app/conn.php';
 
 $query = 'SELECT * FROM `game data` WHERE id = :id';
@@ -61,10 +62,10 @@ if (!$melding) {
              
              <!-- De label is alleen wat op de formulier voorschijnt, wat tussen haakjes staat is wat wordt voorgegeven in de database, typ het dus ook met een hoofdletter -->
              <option value=""></option>
-             <option value="PC">PC</option>
-             <option value="Playstation">Playstation</option>
-             <option value="Nintendo">Nintendo</option>
-             <option value="Xbox">Xbox</option>
+             <option value="pc">PC</option>
+             <option value="playstation">Playstation</option>
+             <option value="nintendo">Nintendo</option>
+             <option value="xbox">Xbox</option>
          </select>
     </div>
     
@@ -85,21 +86,23 @@ if (!$melding) {
                 }
                 ?>
              <option value=""></option>
-             <option value="Actie">Actie</option>
-             <option value="Avontuur">Avontuur</option>
-             <option value="Puzzel">Puzzel</option>
-             <option value="RPG">RPG</option>
-             <option value="First-person shooter">First-person shooter</option>
-             <option value="Third-person shooter">Third-person shooter</option>
-             <option value="Vechten">Vechten</option>
-             <option value="Indie">Indie</option>
-             <option value="Horror">Horror</option>
-             <option value="Survival">Survival</option>
+             <option value="actie">Actie</option>
+             <option value="avontuur">Avontuur</option>
+             <option value="puzzel">Puzzel</option>
+             <option value="rpg">RPG</option>
+             <option value="first-person shooter">First-person shooter</option>
+             <option value="third-person shooter">Third-person shooter</option>
+             <option value="vechten">Vechten</option>
+             <option value="indie">Indie</option>
+             <option value="sport">Sport</option>
+             <option value="horror">Horror</option>
+             <option value="survival">Survival</option>
          </select>
  </div>
 
   <div class="form-group">
         <label for="release_date">Release date</label>
+        <input type="date" id="release_date" name="release_date" required>
         <?= htmlspecialchars($melding['release_date'], ENT_QUOTES, 'UTF-8') ?>
   </div>
  
@@ -119,10 +122,10 @@ if (!$melding) {
                 }
                 ?>
             <option value=""></option>
-             <option value="In bezit">In bezit</option>
-             <option value="Uitgespeeld">Uitgespeeld</option>
-             <option value="Speelt nu">Speelt nu</option>
-             <option value="Wishlist">Wishlist</option>
+             <option value="in_bezit">In bezit</option>
+             <option value="uitgespeeld">Uitgespeeld</option>
+             <option value="speelt_nu">Speelt nu</option>
+             <option value="wishlist">Wishlist</option>
          </select>
      </div>
            
@@ -150,6 +153,7 @@ if (!$melding) {
          </select>  
  </div>    
    
-     <div class="melding"><button type="submit"></button>
+     <div class="melding">
+        <button type="submit">Aanpassen</button>
 </body>
 </html>
